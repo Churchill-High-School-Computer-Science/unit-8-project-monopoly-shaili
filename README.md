@@ -45,7 +45,7 @@ Important Modifications
 
 Properties (in order)          Cost to buy          Base Rent           Color               Cost to buy a house
     Go                              --                  --                  --                  --
-    Mediterranean Avenue            60                  2                   (102,51,0)          50
+    Mediterranean Avenue            60                  2                   (0,255,0)          50
     Community Chest                 --                  --                  --                  --
     Baltic Avenue                   60                  4                   (102,51,0)          50
     Income Tax                      --                  --                  --                  --
