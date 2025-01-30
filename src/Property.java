@@ -5,14 +5,17 @@ public class Property {
 
     Color color;
     String name;
-    int cost;
+    int cost, numhouse;
+    String player;
 
     //const
-    public Property(Color c, String n, int chashing)
+    public Property(Color c, String n, int chashing, String play, int num)
     {
         color=c;
         name=n;
         cost= chashing;
+        player=play;
+        numhouse=num;
     }
     //TODO fix
     public Color getColor(){
@@ -26,16 +29,16 @@ public class Property {
 
     //TODO fix
     public int getNumHouses(){
-        return 5;
+        return numhouse;
     }
 
     //TODO fix
     public String getOwner(){
-        return "no one";
+        return player;
     }
 
     //TODO fix
     public int getRent(){
-        return 20;
+        return cost;
     }
 }
