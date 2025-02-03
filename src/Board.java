@@ -1,24 +1,43 @@
 import java.awt.Color;
+import java.util.HashMap;
+import java.util.Map;
+
 class Board
 {
    Property[][] properties= new Property[11][11];
+static Map<Integer , Property> propertiesMap= new HashMap<>();
+
     public Board(){
         Display.properties= properties;
         properties[0][0]= new Property(new Color(0,255,0), "Go" , 0 ,"None",0);
+        propertiesMap.put(0, properties[0][0]);
         properties[0][1]= new Property(new Color(125,51,0), "Mediterranian" , 60,"None",0);
+        propertiesMap.put(0, properties[0][0]);
         properties[0][2]= new Property(new Color(0,255,255), "Community Chest" , 0,"None",0);
+        propertiesMap.put(0, properties[0][0]);
         properties[0][3]= new Property(new Color(125,51,0), "Baltic Avenue" , 50,"None",0);
+        propertiesMap.put(0, properties[0][0]);
         properties[0][4]= new Property(new Color(192,192,192), "Income Tax" , 0,"None",0);
+        propertiesMap.put(0, properties[0][0]);
         properties[0][5]= new Property(new Color(0,0,0), "Reading railroad" ,200,"None",0);
+        propertiesMap.put(0, properties[0][0]);
         properties[0][6]= new Property(new Color(125,51,0), "Oriental Avenue" , 100, "None",0);
+        propertiesMap.put(0, properties[0][0]);
         properties[0][7]= new Property(new Color(255,200,0), "Chance" , 0, "None",0);
+        propertiesMap.put(0, properties[0][0]);
         properties[0][8]= new Property(new Color(0,153,0), "Vermont Avenue" , 100, "None",0);
+        propertiesMap.put(0, properties[0][0]);
         properties[0][9]= new Property(new Color(0,153,0), "Connectiticut Avenue" , 120,"None",0);
+        propertiesMap.put(0, properties[0][0]);
         properties[0][10]= new Property(new Color(255,255,255), "Jail" , 0, "None",0);
+        propertiesMap.put(0, properties[0][0]);
 
         properties[1][10]= new Property(new Color(0,153,0), "St. Charles PLace" , 140,"None",0);
+        propertiesMap.put(0, properties[0][0]);
         properties[2][10]= new Property(new Color(0,0,0), "Electric Company" , 150,"None",0);
+        propertiesMap.put(0, properties[0][0]);
         properties[3][10]= new Property(new Color(255,175,175), "States Avenue" , 140, "None",0);
+        propertiesMap.put(0, properties[0][0]);
         properties[4][10]= new Property(new Color(255,175,175), "Virginia Avenue" , 160, "None",0);
         properties[5][10]= new Property(new Color(255,175,175), "Pennsylvania Railroad" , 200, "None",0);
         properties[6][10]= new Property(new Color(255,175,175), "St.James Place" , 180, "None",0);
