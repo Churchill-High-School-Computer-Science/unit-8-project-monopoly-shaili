@@ -5,6 +5,7 @@ public class Player {
     String name;
     int money, locate;
     ArrayList<Property> pp= new ArrayList<Property>();
+    int dice;
 
     public Player(String n, int mon)
     {
@@ -12,7 +13,11 @@ public class Player {
         money=mon;
         locate=0;
     }
-
+    public void roll()
+    {
+        dice= (int)(Math.random()*6+1)+(int)(Math.random()*6+1);
+        locate+=dice;
+    }
     //TODO FIX
     public String getName(){
         return name;

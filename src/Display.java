@@ -169,7 +169,7 @@ public class Display extends JFrame {
         //Config dice display
         diceDisplay.setBounds(600, 160, 100, 100);
         diceDisplay.setBackground(new Color(255, 255, 255));
-        diceDisplay.setText("No rolls yet!");
+        
         frame.add(diceDisplay);
 
         communityChest.addActionListener(new ActionListener() {
