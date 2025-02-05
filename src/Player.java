@@ -17,6 +17,7 @@ public class Player {
     {
         dice= (int)(Math.random()*6+1)+(int)(Math.random()*6+1);
         locate+=dice;
+        Display.boardPanel.repaint();
     }
     //TODO FIX
     public String getName(){
