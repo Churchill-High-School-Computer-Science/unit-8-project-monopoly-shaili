@@ -38,7 +38,8 @@ public class Property {
     }
 
     //TODO fix
-    public int getRent(){
+    public int getCost(){
         return cost;
     }
+    //getRent
 }
