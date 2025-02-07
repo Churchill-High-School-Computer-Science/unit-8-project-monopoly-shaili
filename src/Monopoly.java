@@ -15,9 +15,22 @@ public class Monopoly {
 
         //Graphics!
         SwingUtilities.invokeLater(() -> Display.setupFrame());
-        p.roll();
-        o.roll();
-        r.roll();
-        s.roll();
+        int i=1;//change to true later and remove i
+        while(i<=5)
+        {
+            p.roll();
+            p.buy();
+            System.out.println("Next turn");
+            o.roll();
+            o.buy();
+            System.out.println("Next turn");
+            r.roll();
+            r.buy();
+            System.out.println("Next turn");
+            s.roll();
+            s.buy();
+            i++;
+        }
+       
     }
 }

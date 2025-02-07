@@ -6,15 +6,15 @@ public class Property {
     Color color;
     String name;
     int cost, numhouse;
-    String player;
-
+    Player player;
+    
     //const
     public Property(Color c, String n, int chashing, String play, int num)
     {
         color=c;
         name=n;
         cost= chashing;
-        player=play;
+        player=null;
         numhouse=num;
     }
     //TODO fix
@@ -33,7 +33,8 @@ public class Property {
     }
 
     //TODO fix
-    public String getOwner(){
+    public Player getOwner()
+    {
         return player;
     }
 
