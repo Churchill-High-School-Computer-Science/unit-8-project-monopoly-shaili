@@ -43,11 +43,16 @@ public class Player {
     }
     public void buy()
     {
+                                                  
         if(Board.propertiesMap.get(locate).getName()=="Income Tax" ||Board.propertiesMap.get(locate).getName()=="Luxury Tax")
         {
             System.out.println("Pay Tax!");
             money=money-Board.propertiesMap.get(locate).getCost();
         }
+       /* else if(Property.getOwner()!=null)
+        {
+            
+        }*/
         else{
         String[] option ={"Buy"," No"};
         int choice  = Display.choice(name, " Do you wanna buy" +Board.propertiesMap.get(locate).getName()+"for $" +Board.propertiesMap.get(locate).getCost()+"?", option);

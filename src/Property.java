@@ -7,15 +7,16 @@ public class Property {
     String name;
     int cost, numhouse;
     Player player;
-    
+    int rent;
     //const
-    public Property(Color c, String n, int chashing, String play, int num)
+    public Property(Color c, String n, int chashing,  String play, int num,int rente)
     {
         color=c;
         name=n;
         cost= chashing;
         player=null;
         numhouse=num;
+        rent=rente;
     }
     //TODO fix
     public Color getColor(){
@@ -43,4 +44,8 @@ public class Property {
         return cost;
     }
     //getRent
+    public int getRent()
+    {
+        return rent;
+    }
 }
