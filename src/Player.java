@@ -51,7 +51,8 @@ public class Player {
         }
        /* else if(Property.getOwner()!=null)
         {
-            
+            money-(Board.propertiesMap.get(locate).getRent());
+            Board.propertiesMap.get(locate).player.add.Board.propertiesMap.get(locate).getRent();
         }*/
         else{
         String[] option ={"Buy"," No"};
