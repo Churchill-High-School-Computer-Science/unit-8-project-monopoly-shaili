@@ -5,7 +5,7 @@ import java.util.Properties;
 public class Player {
     String name;
     int money, locate;
-   
+    boolean j;
     ArrayList<Property> pp= new ArrayList<Property>();
     int dice;
 
@@ -21,8 +21,14 @@ public class Player {
         locate+=dice;
         if(locate>=40)
         {
-
+            Display.inform("You passed go");
+            money+=200;
             locate%=40;
+        }
+        if(locate==10)
+        {
+            Display.inform("You landed in jail");
+            j=true;
         }
         Display.boardPanel.repaint();
     }
@@ -49,27 +55,39 @@ public class Player {
             System.out.println("Pay Tax!");
             money=money-Board.propertiesMap.get(locate).getCost();
         }
-       /* else if(Property.getOwner()!=null)
+        if(Board.propertiesMap.get(locate).getName()!="Community Chest" || Board.propertiesMap.get(locate).getName()!="Chance" ||Board.propertiesMap.get(locate).getName()!="Jail" || Board.propertiesMap.get(locate).getName()!="Go To Jail"||Board.propertiesMap.get(locate).getName()!="Free Parking" );
         {
-            money-(Board.propertiesMap.get(locate).getRent());
-            Board.propertiesMap.get(locate).player.add.Board.propertiesMap.get(locate).getRent();
-        }*/
-        else{
-        String[] option ={"Buy"," No"};
-        int choice  = Display.choice(name, " Do you wanna buy" +Board.propertiesMap.get(locate).getName()+"for $" +Board.propertiesMap.get(locate).getCost()+"?", option);
-        if(choice==0)
-        {
-            int pmon= Board.propertiesMap.get(locate).getCost();
-            //give money, get card move.
-            if( money>=pmon)
+            if(Board.propertiesMap.get(locate).getOwner()!=null)
             {
-                 money= money-pmon;
-               Board.propertiesMap.get(locate).player=this ;
-                pp.add(Board.propertiesMap.get(locate));
-                System.out.println("Woohoo!Successfully bought"+Board.propertiesMap.get(locate)+"!");
+                Display.inform("You have to pay rent");
+                if(money<Board.propertiesMap.get(locate).getRent())
+                {
+                Display.inform("You are Bankrupt");
+                }
+                else{
+                money-=(Board.propertiesMap.get(locate).getRent());
+                Board.propertiesMap.get(locate).getOwner().money+=Board.propertiesMap.get(locate).getRent();
+                }
             }
-
-        }
+            else
+            {
+                String[] option ={"Buy"," No"};
+                int choice  = Display.choice(name, " Do you wanna buy" +Board.propertiesMap.get(locate).getName()+"for $" +Board.propertiesMap.get(locate).getCost()+"?", option);
+                if(choice==0)
+                {
+                    int pmon= Board.propertiesMap.get(locate).getCost();
+                    //give money, get card move.
+                if( money>=pmon)
+                {
+                    money= money-pmon;
+                    Board.propertiesMap.get(locate).player=this ;
+                    pp.add(Board.propertiesMap.get(locate));
+                    System.out.println("Woohoo!Successfully bought"+Board.propertiesMap.get(locate)+"!");
+                }
+                else
+                    Display.inform("Not enough Money to buy(Bankrupt)");
+                }
+            }
         }
     }
     //TODO FIX
