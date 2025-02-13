@@ -12,31 +12,64 @@ public class Monopoly {
         Display.players.add(o);
         Display.players.add(r);
         Display.players.add(s);
-
+        
         //Graphics!
         SwingUtilities.invokeLater(() -> Display.setupFrame());
         int i=1;//change to true later and remove i
-        while(i<=15)
+        while(i<=6)
         {
-            if(p.j==false)
+            if(p.j==true)
             {
-            p.roll();
-            p.buy();
+                String[] opt= {"Pay", "Dont"};
+                int choice=Display.choice("choice","Do you wanna pay to get out? " , opt);
+                if(choice==0)
+                {
+                    p.j=true;
+                }
             }
-           
+           if(p.j==false){
+            p.roll();
+            p.buy();}
             System.out.println("Next turn");
+            if(o.j==true)
+            {
+                String[] opt= {"Pay", "Dont"};
+                int choice=Display.choice("choice","Do you wanna pay to get out? " , opt);
+                if(choice==0)
+                {
+                    o.j=true;
+                }
+            }
             if(o.j==false)
             {
             o.roll();
             o.buy();
             }
             System.out.println("Next turn");
+            if(r.j==true)
+            {
+                String[] opt= {"Pay", "Dont"};
+                int choice=Display.choice("choice","Do you wanna pay to get out? " , opt);
+                if(choice==0)
+                {
+                    r.j=true;
+                }
+            }
            if(r.j==false)
             {
             r.roll();
             r.buy();
             }
             System.out.println("Next turn");
+            if(s.j==true)
+            {
+                String[] opt= {"Pay", "Dont"};
+                int choice=Display.choice("choice","Do you wanna pay to get out? " , opt);
+                if(choice==0)
+                {
+                    s.j=true;
+                }
+            }
             if(s.j==false)
             {
             s.roll();

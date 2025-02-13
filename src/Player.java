@@ -52,10 +52,10 @@ public class Player {
                                                   
         if(Board.propertiesMap.get(locate).getName()=="Income Tax" ||Board.propertiesMap.get(locate).getName()=="Luxury Tax")
         {
-            System.out.println("Pay Tax!");
+            Display.inform("Pay Tax!");
             money=money-Board.propertiesMap.get(locate).getCost();
         }
-        if(Board.propertiesMap.get(locate).getName()!="Community Chest" || Board.propertiesMap.get(locate).getName()!="Chance" ||Board.propertiesMap.get(locate).getName()!="Jail" || Board.propertiesMap.get(locate).getName()!="Go To Jail"||Board.propertiesMap.get(locate).getName()!="Free Parking" );
+        else if(Board.propertiesMap.get(locate).getName()!="Community Chest" && Board.propertiesMap.get(locate).getName()!="Chance" && Board.propertiesMap.get(locate).getName()!="Jail" && Board.propertiesMap.get(locate).getName()!="Go To Jail"&&Board.propertiesMap.get(locate).getName()!="Free Parking" )
         {
             if(Board.propertiesMap.get(locate).getOwner()!=null)
             {
@@ -68,6 +68,10 @@ public class Player {
                 money-=(Board.propertiesMap.get(locate).getRent());
                 Board.propertiesMap.get(locate).getOwner().money+=Board.propertiesMap.get(locate).getRent();
                 }
+            }
+            else if (Board.propertiesMap.get(locate).getName()=="Go To Jail")
+            {
+               
             }
             else
             {

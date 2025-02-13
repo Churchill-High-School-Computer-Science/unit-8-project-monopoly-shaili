@@ -48,4 +48,5 @@ public class Property {
     {
         return rent;
     }
+    
 }

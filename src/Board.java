@@ -59,7 +59,7 @@ static Map<Integer , Property> propertiesMap= new HashMap<>();
         propertiesMap.put(22, properties[10][8]);
         properties[10][7]= new Property(new Color(175,153,175), "Indiana Avenue" , 220, "None",0, 18);
         propertiesMap.put(23, properties[10][7]);
-        properties[10][6]= new Property(new Color(255,255,0), "Illinois Avenue" , 0,"None",0, 20);
+        properties[10][6]= new Property(new Color(255,255,0), "Illinois Avenue" ,240 ,"None",0, 20);
         propertiesMap.put(24, properties[10][6]);
         properties[10][5]= new Property(new Color(0,0,0), "B&O Railroad" , 200, "None",0, 25);
         propertiesMap.put(25, properties[10][5]);
