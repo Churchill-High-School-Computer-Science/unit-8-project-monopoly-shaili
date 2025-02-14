@@ -1,4 +1,5 @@
 
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Properties;
 
@@ -71,7 +72,9 @@ public class Player {
             }
             else if (Board.propertiesMap.get(locate).getName()=="Go To Jail")
             {
-               
+               locate=10;
+                Display.inform("You landed in jail");
+                j=true;
             }
             else
             {
