@@ -15,8 +15,8 @@ public class Monopoly {
         
         //Graphics!
         SwingUtilities.invokeLater(() -> Display.setupFrame());
-        int i=1;//change to true later and remove i
-        while(i<=6)
+        
+        while(true)
         {
             if(p.j==true)
             {
@@ -25,6 +25,7 @@ public class Monopoly {
                 if(choice==0)
                 {
                     p.j=true;
+                    p.money-=50;
                 }
             }
            if(p.j==false){
@@ -38,6 +39,7 @@ public class Monopoly {
                 if(choice==0)
                 {
                     o.j=true;
+                    o.money-=50;
                 }
             }
             if(o.j==false)
@@ -53,6 +55,7 @@ public class Monopoly {
                 if(choice==0)
                 {
                     r.j=true;
+                    r.money-=50;
                 }
             }
            if(r.j==false)
@@ -68,6 +71,7 @@ public class Monopoly {
                 if(choice==0)
                 {
                     s.j=true;
+                    s.money-=50;
                 }
             }
             if(s.j==false)
@@ -75,7 +79,7 @@ public class Monopoly {
             s.roll();
             s.buy();
             }
-            i++;
+            
         }
        
     }
